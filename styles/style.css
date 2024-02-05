@@ -104,6 +104,8 @@ body {
   background-color: var(--light--bg);
   background-image: url('../img/hero/hero-bg.png');
   background-blend-mode: color-burn;
+  -webkit-background-blend-mode: color-burn; /* Для WebKit (Chrome, Safari) */
+  -moz-background-blend-mode: color-burn; /* Для Firefox */
   position: relative;
   overflow: hidden;
 }
