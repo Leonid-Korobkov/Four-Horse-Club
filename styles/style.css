@@ -102,12 +102,14 @@ body {
 .hero-main {
   min-height: 100vh;
   background-color: var(--light--bg);
-  background-image: url('../img/hero/hero-bg.png');
-  background-blend-mode: color-burn;
-  -webkit-background-blend-mode: color-burn; /* Для WebKit (Chrome, Safari) */
-  -moz-background-blend-mode: color-burn; /* Для Firefox */
   position: relative;
   overflow: hidden;
+}
+@supports (background-blend-mode: color-burn) {
+  .hero-main {
+    background-image: url('../img/hero/hero-bg.png');
+    background-blend-mode: color-burn;
+  }
 }
 @media screen and (min-height: 830px) {
   .hero-main {
